@@ -1,8 +1,8 @@
 from django.db import models
 
 Programme_Choice = (
-    ("Donation","Donation"),
-    ("Volunteer","Volunteer"),
+    ("Campaign","Campaign"),
+    ("Fundraiser","Fundraiser"),
 )
 
 class Gallery(models.Model):
@@ -33,11 +33,16 @@ class Programme(models.Model):
     Type = models.CharField(choices=Programme_Choice, max_length=50)
 
     # If Donation
-    Money_to_raise = models.FloatField()
-    Raised_till_now = models.FloatField()
+    Money_to_raise = models.FloatField(null=True,blank=True)
+    Raised_till_now = models.FloatField(null=True,blank=True)
 
     def __str__(self):
         return f"{self.Name}"
+
+    def get_percent(self):
+        per = (self.Raised_till_now/self.Money_to_raise)*100
+        # print(per)
+        return int(per)
 
 class Blog(models.Model):
 
