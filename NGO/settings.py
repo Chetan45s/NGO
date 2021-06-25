@@ -16,6 +16,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Features',
+    'ckeditor',
 ]
 
 MIDDLEWARE = [
@@ -84,14 +85,16 @@ USE_L10N = True
 
 USE_TZ = True
 
+PROJECT_ROOT = os.path.realpath(os.path.dirname(__file__))
+
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
 
-PROJECT_ROOT = os.path.realpath(os.path.dirname(__file__))
 MEDIA_ROOT = PROJECT_ROOT + '/static/'
 MEDIA_URL = '/media/'
 

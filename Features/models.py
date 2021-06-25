@@ -1,4 +1,5 @@
 from django.db import models
+from ckeditor.fields import RichTextField
 
 Programme_Choice = (
     ("Campaign","Campaign"),
@@ -28,7 +29,7 @@ class Programme(models.Model):
     Name = models.CharField(max_length=200)
     Image = models.ImageField(upload_to="Programme_Images")   
     Short_Detail = models.TextField()
-    Full_Detail = models.TextField()
+    Full_Detail = RichTextField(blank=True,null=True)
     
     Type = models.CharField(choices=Programme_Choice, max_length=50)
 
@@ -48,7 +49,8 @@ class Blog(models.Model):
 
     Featured_Image = models.ImageField(upload_to="Blog_Images")
     Title = models.CharField(max_length=2000)
-    Text = models.TextField()
+    Text = RichTextField(blank=True,null=True)
+    Date = models.DateField(auto_now=True)
 
     def __str__(self):
         return f"{self.Title}"

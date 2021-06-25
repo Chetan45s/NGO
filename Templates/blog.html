@@ -32,162 +32,59 @@
       </div>
     </section>
     <!-- End page hero  -->
+
+
     <section class="pt-120 pb-120">
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
             <div class="news-grids">
               <div class="row">
+
+              {% for blog in obj %}
                 <div class="col-md-4">
                   <div class="post-block">
                     <div class="pb-thumb">
-                      <img src="assets/img/post-1.jpg" alt="post image" class="img-fluid">
+                      <img src={{ blog.Featured_Image.url }} alt="post image" class="img-fluid">
                       <div class="pb-date">
                         <div class="pb-box">
-                          <span class="day">30</span>
-                          <span class="month">Apr</span>
+                          <span class="day">{{ blog.Date|date:"d" }}</span>
+                          <span class="month">{{ blog.Date|date:"M" }}</span>
                         </div>
                       </div>
                     </div>
                     <div class="pb-content">
-                      <h2 class="pb-title"><a href="single.html">Every Child Deserves a
-                          Healthy Start</a></h2>
+                      <h2 class="pb-title"><a href="{% url 'blog_detail' blog.id %}">{{ blog.Title }}</a></h2>
                       <div class="pb-meta">
                         <div class="pb-author">
                           <i class="icon-circle-user"></i>by Admin
                         </div>
-                        <div class="pb-comment">
+                        {% comment %} <div class="pb-comment">
                           <i class="icon-comments"></i>2 Comments
-                        </div>
+                        </div> {% endcomment %}
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="col-md-4">
-                  <div class="post-block">
-                    <div class="pb-thumb">
-                      <img src="assets/img/post-2.jpg" alt="post image" class="img-fluid">
-                      <div class="pb-date">
-                        <div class="pb-box">
-                          <span class="day">16</span>
-                          <span class="month">Apr</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="pb-content">
-                      <h2 class="pb-title"><a href="single.html">Every Child Deserves a
-                          Healthy Start</a></h2>
-                      <div class="pb-meta">
-                        <div class="pb-author">
-                          <i class="icon-circle-user"></i>by Admin
-                        </div>
-                        <div class="pb-comment">
-                          <i class="icon-comments"></i>2 Comments
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="post-block">
-                    <div class="pb-thumb">
-                      <img src="assets/img/post-3.jpg" alt="post image" class="img-fluid">
-                      <div class="pb-date">
-                        <div class="pb-box">
-                          <span class="day">02</span>
-                          <span class="month">Mar</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="pb-content">
-                      <h2 class="pb-title"><a href="single.html">Every Child Deserves a
-                          Healthy Start</a></h2>
-                      <div class="pb-meta">
-                        <div class="pb-author">
-                          <i class="icon-circle-user"></i>by Admin
-                        </div>
-                        <div class="pb-comment">
-                          <i class="icon-comments"></i>2 Comments
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="post-block">
-                    <div class="pb-thumb">
-                      <img src="assets/img/post-3.jpg" alt="post image" class="img-fluid">
-                      <div class="pb-date">
-                        <div class="pb-box">
-                          <span class="day">02</span>
-                          <span class="month">Mar</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="pb-content">
-                      <h2 class="pb-title"><a href="single.html">Every Child Deserves a
-                          Healthy Start</a></h2>
-                      <div class="pb-meta">
-                        <div class="pb-author">
-                          <i class="icon-circle-user"></i>by Admin
-                        </div>
-                        <div class="pb-comment">
-                          <i class="icon-comments"></i>2 Comments
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="post-block">
-                    <div class="pb-thumb">
-                      <img src="assets/img/post-3.jpg" alt="post image" class="img-fluid">
-                      <div class="pb-date">
-                        <div class="pb-box">
-                          <span class="day">02</span>
-                          <span class="month">Mar</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="pb-content">
-                      <h2 class="pb-title"><a href="single.html">Every Child Deserves a
-                          Healthy Start</a></h2>
-                      <div class="pb-meta">
-                        <div class="pb-author">
-                          <i class="icon-circle-user"></i>by Admin
-                        </div>
-                        <div class="pb-comment">
-                          <i class="icon-comments"></i>2 Comments
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="post-block">
-                    <div class="pb-thumb">
-                      <img src="assets/img/post-3.jpg" alt="post image" class="img-fluid">
-                      <div class="pb-date">
-                        <div class="pb-box">
-                          <span class="day">02</span>
-                          <span class="month">Mar</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="pb-content">
-                      <h2 class="pb-title"><a href="single.html">Every Child Deserves a
-                          Healthy Start</a></h2>
-                      <div class="pb-meta">
-                        <div class="pb-author">
-                          <i class="icon-circle-user"></i>by Admin
-                        </div>
-                        <div class="pb-comment">
-                          <i class="icon-comments"></i>2 Comments
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              {% endfor %}
+
+<div
+    class="fb-page"
+    data-href="https://www.facebook.com/Marvellous-Universe-151543635437758"
+    data-tabs="timeline"
+    data-width="500"
+    data-height="1500"
+    data-small-header="false"
+    data-adapt-container-width="true"
+    data-hide-cover="false"
+    data-show-facepile="true">
+    <blockquote
+        cite="https://www.facebook.com/Marvellous-Universe-151543635437758"
+        class="fb-xfbml-parse-ignore">
+        <a href="https://www.facebook.com/Marvellous-Universe-151543635437758">Marvellous Universe</a>
+    </blockquote>
+</div>
+
               </div>
             </div>
           </div>

@@ -15,4 +15,5 @@ urlpatterns = [
     path('campaign/<int:pk>',views.programme_campaign,name='programme_campaign'),
     path('fundraiser/<int:pk>',views.programme_fundraiser,name='programme_fundraiser'),
     path('blog/',views.blog,name='blog'),
+    path('blog/<int:pk>',views.blog_detail,name='blog_detail'),
 ]

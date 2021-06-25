@@ -1,0 +1,72 @@
+
+{% extends "header.html" %}
+{% load static %}
+{% block content %}
+
+    <div class="full-bar-search-wrap">
+      <div class="close-search"></div>
+      <div class="search-form-wrapper">
+        <form method="get" class="search-form" action="#">
+          <div class="search-form-group"> <input name="s" type="text" class="form-control" value=""
+              placeholder="Search...">
+            <div class="search-line"></div>
+          </div>
+          <button type="submit" class="search-submit"><i class="icon-search"></i></button>
+        </form>
+      </div>
+    </div>
+    <!-- End header  -->
+    <!-- Start page hero  -->
+
+
+
+    <section class="page-hero" data-background="assets/img/page-hero.jpg">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <nav aria-label="breadcrumb" class="header-breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Stories</li>
+              </ol>
+            </nav>
+            <h1 class="page-title">{{ obj.Title }}</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End page hero  -->
+    <section class="pt-120 pb-120">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="single-post">
+              <div class="sp-thumbnail">
+                <img src={{ obj.Featured_Image.url }} alt="sp-thumbnail" class="img-fluid">
+                <div class="pb-date">
+                  <div class="pb-box">
+                    <span class="day">{{ obj.Date|date:"d" }}</span>
+                    <span class="month">{{ obj.Date|date:"M" }}</span>
+                  </div>
+                </div>
+              </div>
+              <div class="pb-meta">
+                <div class="pb-author">
+                  <i class="icon-circle-user"></i>by Admin
+                </div>
+                {% comment %} <div class="pb-comment">
+                  <i class="icon-comments"></i>2 Comments
+                </div> {% endcomment %}
+              </div>
+              <div class="sp-content">
+                {{ obj.Text|safe }}
+              </div>
+              <br>
+
+        </div>
+      </div>
+    </section>
+
+
+
+{% endblock content %}

@@ -72,3 +72,10 @@ def blog(request):
 
     return render(request,"blog.html",context)
 
+def blog_detail(request,*args, **kwargs):
+    blog_obj = get_object_or_404(Blog,pk=kwargs.get("pk"))
+    context = {
+        'obj' : blog_obj,
+    }
+
+    return render(request,"blog_detail.html",context)
