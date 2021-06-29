@@ -2,20 +2,6 @@
 {% load static %}
 {% block content %}
 
-    <div class="full-bar-search-wrap">
-      <div class="close-search"></div>
-      <div class="search-form-wrapper">
-        <form method="get" class="search-form" action="#">
-          <div class="search-form-group"> <input name="s" type="text" class="form-control" value=""
-              placeholder="Search...">
-            <div class="search-line"></div>
-          </div>
-          <button type="submit" class="search-submit"><i class="icon-search"></i></button>
-        </form>
-      </div>
-    </div>
-    <!-- End header  -->
-    <!-- Start page hero  -->
     <section class="page-hero" data-background="assets/img/page-hero.jpg">
       <div class="container">
         <div class="row">
@@ -59,31 +45,15 @@
                         <div class="pb-author">
                           <i class="icon-circle-user"></i>by Admin
                         </div>
-                        {% comment %} <div class="pb-comment">
-                          <i class="icon-comments"></i>2 Comments
-                        </div> {% endcomment %}
+                        <div class="pb-comment">
+                          <i class="icon-comments"></i><a href="{% url 'blog_detail' blog.id %}#disqus_thread"></a>
+                        </div> 
                       </div>
                     </div>
                   </div>
                 </div>
               {% endfor %}
 
-<div
-    class="fb-page"
-    data-href="https://www.facebook.com/Marvellous-Universe-151543635437758"
-    data-tabs="timeline"
-    data-width="500"
-    data-height="1500"
-    data-small-header="false"
-    data-adapt-container-width="true"
-    data-hide-cover="false"
-    data-show-facepile="true">
-    <blockquote
-        cite="https://www.facebook.com/Marvellous-Universe-151543635437758"
-        class="fb-xfbml-parse-ignore">
-        <a href="https://www.facebook.com/Marvellous-Universe-151543635437758">Marvellous Universe</a>
-    </blockquote>
-</div>
 
               </div>
             </div>

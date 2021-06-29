@@ -30,7 +30,10 @@ class Programme(models.Model):
     Image = models.ImageField(upload_to="Programme_Images")   
     Short_Detail = models.TextField()
     Full_Detail = RichTextField(blank=True,null=True)
-    
+    Date = models.DateField(auto_now=False,null=True,blank=True)
+    Time = models.TimeField(auto_now=False, null=True,blank=True)
+    Venue = models.CharField(max_length=500,null=True,blank=True)
+    Venue_link = models.URLField(max_length=1000,null=True,blank=True)
     Type = models.CharField(choices=Programme_Choice, max_length=50)
 
     # If Donation

@@ -3,20 +3,6 @@
 {% load static %}
 {% block content %}
 
-    <div class="full-bar-search-wrap">
-      <div class="close-search"></div>
-      <div class="search-form-wrapper">
-        <form method="get" class="search-form" action="#">
-          <div class="search-form-group"> <input name="s" type="text" class="form-control" value=""
-              placeholder="Search...">
-            <div class="search-line"></div>
-          </div>
-          <button type="submit" class="search-submit"><i class="icon-search"></i></button>
-        </form>
-      </div>
-    </div>
-    <!-- End header  -->
-    <!-- Start page hero  -->
 
 
 
@@ -42,7 +28,7 @@
           <div class="col-lg-8">
             <div class="single-post">
               <div class="sp-thumbnail">
-                <img src={{ obj.Featured_Image.url }} alt="sp-thumbnail" class="img-fluid">
+                <img src="{{ obj.Featured_Image.url }}" alt="sp-thumbnail" class="img-fluid">
                 <div class="pb-date">
                   <div class="pb-box">
                     <span class="day">{{ obj.Date|date:"d" }}</span>
@@ -54,15 +40,151 @@
                 <div class="pb-author">
                   <i class="icon-circle-user"></i>by Admin
                 </div>
-                {% comment %} <div class="pb-comment">
+                <!-- {% comment %} <div class="pb-comment">
                   <i class="icon-comments"></i>2 Comments
-                </div> {% endcomment %}
+                </div> {% endcomment %} -->
               </div>
-              <div class="sp-content">
-                {{ obj.Text|safe }}
-              </div>
-              <br>
+                <div class="sp-content">
+                  <p>{{ obj.Text|safe }}</p>
+                </div>
 
+              <div class="sp-tags-share">
+                <div class="row align-items-center">
+                  <div class="col-md-6 mb-xs-30">
+                    <div class="sp-tags">
+                      <h6 class="tags-title">Share on:</h6>
+
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="social-media-list float-md-end">
+                      <ul>
+                        <li><a href="#"><i class="icon-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="icon-instagram"></i></a></li>
+                        <li><a href="#"><i class="icon-twitter"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://ngo-3.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+              {% comment %} <div class="comment-block">
+                <h2 class="comments-title">Comments</h2>
+                <ol class="comment-list">
+                  <li class="comment-list-item">
+                    <div class="commment-inner stand_comment">
+                      <div class="comment-details">
+                        <div class="cmr-block">
+                          <div class="commentor-meta">
+                            <div class="commentor-name"><a href="#">David Marks</a></div>
+                            <div class="comment-date">3 hours ago</div>
+                          </div>
+                        </div>
+                        <div class="comment-content">
+                          Cursus massa at urnaaculis estie. Sed aliquamellus vitae ultrs condmentum lightly believable.
+                          If you are going to use a of you need to be sure there isn't anything embarrassing.
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ol>
+                <div class="comment-form-box">
+                  <div class="comment-respond">
+                    <h3 class="comment-reply-title">Leave a Comment</h3>
+                    <form action="#" class="comment-form">
+                      <div class="cf-group">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <input type="text" name="name" id="name" placeholder="Your name">
+                          </div>
+                          <div class="col-md-6">
+                            <input type="email" name="email" id="email" placeholder="Email address">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="cf-group">
+                        <textarea name="comment" id="comment" cols="30" rows="4" class="cf-message"
+                          placeholder="Write a comment"></textarea>
+                      </div>
+                      <div class="cf-group">
+                        <button class="theme-btn cs-btn">Submit Comment</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div> {% endcomment %}
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <aside class="wp-sidebar">
+              <div class="widget-box">
+                <h3 class="widget-title">Recent Stories</h3>
+                <div class="rp-widget">
+                  <div class="rp-item">
+                    <div class="rp-thumb">
+                      <img src="assets/img/rp-1.jpg" alt="lp-thumb" class="img-fluid">
+                    </div>
+                    <div class="rp-details">
+                      <div class="rp-author"><i class="icon-circle-user aut-icon"></i> by Admin</div>
+                      <h4 class="rp-title"><a href="single.html">Learn how access to
+                          clean the water</a></h4>
+                    </div>
+                  </div>
+                  <div class="rp-item">
+                    <div class="rp-thumb">
+                      <img src="assets/img/rp-thumb-1.jpg" alt="lp-thumb" class="img-fluid">
+                    </div>
+                    <div class="rp-details">
+                      <div class="rp-author"><i class="icon-circle-user aut-icon"></i> by Admin</div>
+                      <h4 class="rp-title"><a href="single.html">Learn how access to
+                          clean the water</a></h4>
+                    </div>
+                  </div>
+                  <div class="rp-item">
+                    <div class="rp-thumb">
+                      <img src="assets/img/rp-thumb-2.jpg" alt="lp-thumb" class="img-fluid">
+                    </div>
+                    <div class="rp-details">
+                      <div class="rp-author"><i class="icon-circle-user aut-icon"></i> by Admin</div>
+                      <h4 class="rp-title"><a href="single.html">Learn how access to
+                          clean the water</a></h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="widget-box widget_categories">
+                <h3 class="widget-title">Categories</h3>
+                <ul>
+                  <li><a href="#">Charity</a></li>
+                  <li><a href="#">Fundrising</a></li>
+                  <li><a href="#">Donations</a></li>
+                  <li><a href="#">Save Lifes</a></li>
+                  <li><a href="#">Health</a></li>
+                  <li><a href="#">Education</a></li>
+                </ul>
+              </div>
+            </aside>
+          </div>
         </div>
       </div>
     </section>

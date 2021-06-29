@@ -2,7 +2,20 @@ from django.shortcuts import render,get_object_or_404
 from .models import Gallery, Volunteer, Programme, Blog
 
 def home(request):
-    return render(request,"index.html")
+    blog_obj = Blog.objects.order_by("Date")[:3]
+    programme_obj = Programme.objects.filter(Type="Campaign").order_by("Date")[:4]
+    fundraiser_obj = Programme.objects.filter(Type="Fundraiser").order_by("Date")[:4]
+    gallery_obj = Gallery.objects.all()
+
+
+    context = {
+        "blog_obj" : blog_obj,
+        "programme_obj" : programme_obj,
+        "fundraiser_obj" : fundraiser_obj,
+        "gallery_obj" :gallery_obj,
+    }
+
+    return render(request,"index.html",context)
 
 def about(request):
     return render(request,"about.html")

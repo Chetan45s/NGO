@@ -1,91 +1,7 @@
 {% extends "header.html" %}
 {% load static %}
 {% block content %}
-    <header id="micro-mobile-header" class="mobile-header">
-      <div class="mobile-header-inner">
-        <div class="container-fluid">
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="col-8">
-              <div class="mobile-logo-wrap">
-                <a href="index.html"><img src="assets/img/logo.png" alt="header logo" class="img-fluid"></a>
-              </div>
-            </div>
-            <div class="col-4">
-              <div class="menu-trigger">
-                <span class="bar-line-1"></span>
-                <span class="bar-line-2"></span>
-                <span class="bar-line-3"></span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="micro-mobile-header-navigation">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-sm-12">
-              <nav class="mobile-header-menu" role="navigation" aria-label="Header mobile menu">
-                <ul class="menu">
-                  <li class="current-menu-item menu-item-has-children"><a href="index.html"><span>Home</span></a>
-                    <ul class="sub-menu">
-                      <li><a href="index.html">Home 1</a></li>
-                      <li><a href="home-2.html">Home 2</a></li>
-                      <li class="menu-item-has-children"><a href="home-2.html">Header</a>
-                        <ul class="sub-menu">
-                          <li><a href="index.html">Header 1</a></li>
-                          <li><a href="home-2.html">Header 2</a></li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="menu-item-has-children"><a href="#">Pages</a>
-                    <ul class="sub-menu">
-                      <li><a href="about.html">About</a></li>
-                      <li><a href="gallery.html">Gallery</a></li>
-                      <li><a href="volunteers.html">Volunteers</a></li>
-                      <li><a href="single-volunteer.html">Volunteer details</a></li>
-                    </ul>
-                  </li>
-                  <li class="menu-item-has-children"><a href="causes.html">Causes</a>
-                    <ul class="sub-menu">
-                      <li><a href="causes.html">Cause grids</a></li>
-                      <li><a href="single-cause.html">Cause details</a></li>
-                    </ul>
-                  </li>
-                  <li class="menu-item-has-children"><a href="events.html">Events</a>
-                    <ul class="sub-menu">
-                      <li><a href="events.html">Event grids</a></li>
-                      <li><a href="single-event.html">Event details</a></li>
-                    </ul>
-                  </li>
-                  <li class="menu-item-has-children"><a href="news.html">News</a>
-                    <ul class="sub-menu">
-                      <li><a href="news.html">News grids</a></li>
-                      <li><a href="single.html">News details</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="contact.html">Contact</a></li>
-                </ul>
-              </nav>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-    <div class="full-bar-search-wrap">
-      <div class="close-search"></div>
-      <div class="search-form-wrapper">
-        <form method="get" class="search-form" action="#">
-          <div class="search-form-group"> <input name="s" type="text" class="form-control" value=""
-              placeholder="Search...">
-            <div class="search-line"></div>
-          </div>
-          <button type="submit" class="search-submit"><i class="icon-search"></i></button>
-        </form>
-      </div>
-    </div>
-    <!-- End header  -->
-    <!-- Start page hero  -->
+
     <section class="page-hero" data-background="assets/img/page-hero.jpg">
       <div class="container">
         <div class="row">
@@ -120,7 +36,7 @@
                   <ul>
                     <li><a href="{{ vol.Facebook }}"><i class="icon-facebook-f"></i></a></li>
                     <li><a href="{{ vol.Twitter }}"><i class="icon-twitter"></i></a></li>
-                    {% comment %} <li><a href="#"><i class="icon-pinterest-p"></i></a></li> {% endcomment %}
+
                     <li><a href="{{ vol.Instagram }}"><i class="icon-instagram"></i></a></li>
                   </ul>
                 </div>
@@ -131,35 +47,5 @@
         </div>
       </div>
     </section>
-    
-    <section class="subscription-section">
-      <div class="container">
-        <div class="row align-items-center justify-content-between">
-          <div class="col-xl-4 col-lg-3 mb-xs-30 mb-md-30">
-            <h2 class="subs-title">Subscribe Newsletter</h2>
-          </div>
-          <div class="col-xl-4 col-lg-5 mb-xs-30 mb-md-30">
-            <div class="subs-block">
-              <form action="#">
-                <div class="subs-field">
-                  <input type="email" name="subsemail" id="subsemail" placeholder="Email address">
-                  <button class="subs-submit">Subscribe</button>
-                </div>
-              </form>
-            </div>
-          </div>
-          <div class="col-xl-4 col-lg-4">
-            <div class="social-media-list social-white-bg">
-              <ul>
-                <li><a href="#"><i class="icon-facebook-f"></i></a></li>
-                <li><a href="#"><i class="icon-pinterest-p"></i></a></li>
-                <li><a href="#"><i class="icon-instagram"></i></a></li>
-                <li><a href="#"><i class="icon-twitter"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+
 {% endblock content %}
-    

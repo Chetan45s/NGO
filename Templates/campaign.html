@@ -2,20 +2,6 @@
 {% load static %}
 {% block content %}
 
-    <div class="full-bar-search-wrap">
-      <div class="close-search"></div>
-      <div class="search-form-wrapper">
-        <form method="get" class="search-form" action="#">
-          <div class="search-form-group"> <input name="s" type="text" class="form-control" value=""
-              placeholder="Search...">
-            <div class="search-line"></div>
-          </div>
-          <button type="submit" class="search-submit"><i class="icon-search"></i></button>
-        </form>
-      </div>
-    </div>
-    <!-- End header  -->
-    <!-- Start page hero  -->
 
 
 
@@ -28,10 +14,10 @@
             <nav aria-label="breadcrumb" class="header-breadcrumb">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Causes</li>
+                <li class="breadcrumb-item active" aria-current="page">Campaigns</li>
               </ol>
             </nav>
-            <h1 class="page-title">Causes</h1>
+            <h1 class="page-title">Campaigns</h1>
           </div>
         </div>
       </div>
@@ -59,7 +45,7 @@
                     <h3 class="cause-grid-title"><a href="{% url 'programme_campaign' camp.id %}">{{ camp.Name }}</a></h3>
                     <p class="cause-grid-des">{{ camp.Short_Detail }}</p>
                   </div>
-                  
+
                 </div>
               </div>
             </div>
