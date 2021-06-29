@@ -1,9 +1,8 @@
-<!doctype html>
 {% extends "header.html" %}
 {% load static %}
 {% block content %}
 
-    <section class="page-hero" data-background="assets/img/page-hero.jpg">
+    <section class="page-hero" data-background="{% static 'assets/img/page-hero.jpg' %}">
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
@@ -23,24 +22,31 @@
       <div class="container">
         <div class="row g-70">
           <div class="col-lg-6">
-            <figure class="mb-60"><img src="assets/img/aboutpage-1.jpg" alt="aboutpage" class="img-fluid"></figure>
+            <figure class="mb-60"><img src="{% static 'assets/img/aboutpage-1.jpg' %}" alt="aboutpage" class="img-fluid"></figure>
             <span class="sec-tagline">Help us now</span>
-            <h2 class="sec-title">Functional Charity &
-              Fundraising Fully Online
-              Platform</h2>
+            <h2 class="sec-title">“The sole meaning of life is to serve humanity.” – Leo Tolstoy</h2>
           </div>
           <div class="col-lg-6">
-            <figure class="mb-60"><img src="assets/img/aboutpage-2.jpg" alt="aboutpage" class="img-fluid"></figure>
-            <p>Tincidunt elit magnis nulla facilisis sagittis sapien nunc amet ultrices dolores sit ipsum velit purus
-              aliquet massa fringilla leo orci. Sapien nunc amet ultrices, dolores sit ipsum velit purus aliquet, massa
-              fringilla leo orci dolors sit amet elit amet.</p>
-            <p>We deserve clean air to breathe and a sustain-able future that is responsive to challenges by climate
-              change.</p>
+            <figure class="mb-60"><img src="{% static 'assets/img/aboutpage-2.jpg' %}" alt="aboutpage" class="img-fluid"></figure>
           </div>
+          <p>
+            Ek Nayi Udaan was founded in the year 2021 by a young social worker and doctor, who further brought the group together to contribute towards the betterment of society with a focus on child education, holistic child development and women empowerment. We share a common dream – a world where every child is showered with love and is given opportunities for their bright future; a world where the horrors of child labour mar no child's innocence, and a world where women's wellbeing is paid attention to and they're empowered to sustain themselves and their family.
+            </p>
+            <hr>
+
+            <p>
+            Despite being the education hub of Rajasthan, Sikar has over many people living in makeshift homes in slums that are overcrowded, lack adequate water supply, sanitation, and security. Children of these slum dwellers often do not get access to primary education and instead have to start working to support their families. They are forced to grow up in haste and suffer the loss of their childhood and innocence at such a tender age. They are taken advantage of by employers who use them as cheap labour. United Nations recognizes the deprivation of these resources to be a violation of fundamental human rights. It is not just the responsibility of the government to promote and protect the human rights and fundamental freedoms of individuals or groups. It is our duty – the citizens – to do our bit in ensuring equal advancement of all sections of society.
+            The statistics and the problem is same across India when we talk about less privileged one in our country be it rural or urban India.
+            </p>
+            <hr>
+
+            <p>
+            We at Ek Nayi Udaan vowed to end this widespread violation of people's fundamental rights, especially of women and children residing in the slums of metropolitan cities. We aim to empower them through education and employment by implementing models of development tailored to the community's needs.
+            </p>
         </div>
       </div>
     </section>
-    <section class="cta-vid-sec" data-background="assets/img/counter-bg.jpg">
+    <section class="cta-vid-sec" data-background="{% static 'assets/img/counter-bg.jpg' %}">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-md-6 mb-xs-30">
@@ -57,7 +63,7 @@
         </div>
       </div>
     </section>
-    <section class="testimonials-section pt-120 pb-120" data-background="assets/img/hands-bg.jpg">
+    <section class="testimonials-section pt-120 pb-120" data-background="{% static 'assets/img/hands-bg.jpg' %}">
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
@@ -70,7 +76,7 @@
                   <div class="swiper-slide">
                     <div class="ts-inner">
                       <div class="tu-photo">
-                        <img src="assets/img/testi-user-1.jpg" alt="testi-user" class="img-fluid">
+                        <img src="{% static 'assets/img/testi-user-1.jpg' %}" alt="testi-user" class="img-fluid">
                       </div>
                       <div class="tc-block">
                         <p>This is due to their excellent service, competitive pricing and customer support. It’s
@@ -84,7 +90,7 @@
                   <div class="swiper-slide">
                     <div class="ts-inner">
                       <div class="tu-photo">
-                        <img src="assets/img/testi-user-2.jpg" alt="testi-user" class="img-fluid">
+                        <img src="{% static 'assets/img/testi-user-2.jpg' %}" alt="testi-user" class="img-fluid">
                       </div>
                       <div class="tc-block">
                         <p>This is due to their excellent service, competitive pricing and customer support. It’s
@@ -98,7 +104,7 @@
                   <div class="swiper-slide">
                     <div class="ts-inner">
                       <div class="tu-photo">
-                        <img src="assets/img/testi-user-1.jpg" alt="testi-user" class="img-fluid">
+                        <img src="{% static 'assets/img/testi-user-1.jpg' %}" alt="testi-user" class="img-fluid">
                       </div>
                       <div class="tc-block">
                         <p>This is due to their excellent service, competitive pricing and customer support. It’s
@@ -131,25 +137,25 @@
             <div class="partners-carousel swiper-container">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <a href="#"><img src="assets/img/partner-01.png" alt="partner" class="img-fluid"></a>
+                  <a href="#"><img src="{% static 'assets/img/partner-01.png" alt="partner" class="img-fluid"></a>
                 </div>
                 <div class="swiper-slide">
-                  <a href="#"><img src="assets/img/partner-02.png" alt="partner" class="img-fluid"></a>
+                  <a href="#"><img src="{% static 'assets/img/partner-02.png" alt="partner" class="img-fluid"></a>
                 </div>
                 <div class="swiper-slide">
-                  <a href="#"><img src="assets/img/partner-03.png" alt="partner" class="img-fluid"></a>
+                  <a href="#"><img src="{% static 'assets/img/partner-03.png" alt="partner" class="img-fluid"></a>
                 </div>
                 <div class="swiper-slide">
-                  <a href="#"><img src="assets/img/partner-01.png" alt="partner" class="img-fluid"></a>
+                  <a href="#"><img src="{% static 'assets/img/partner-01.png" alt="partner" class="img-fluid"></a>
                 </div>
                 <div class="swiper-slide">
-                  <a href="#"><img src="assets/img/partner-04.png" alt="partner" class="img-fluid"></a>
+                  <a href="#"><img src="{% static 'assets/img/partner-04.png" alt="partner" class="img-fluid"></a>
                 </div>
                 <div class="swiper-slide">
-                  <a href="#"><img src="assets/img/partner-05.png" alt="partner" class="img-fluid"></a>
+                  <a href="#"><img src="{% static 'assets/img/partner-05.png" alt="partner" class="img-fluid"></a>
                 </div>
                 <div class="swiper-slide">
-                  <a href="#"><img src="assets/img/partner-06.png" alt="partner" class="img-fluid"></a>
+                  <a href="#"><img src="{% static 'assets/img/partner-06.png" alt="partner" class="img-fluid"></a>
                 </div>
               </div>
             </div>
@@ -169,7 +175,7 @@
           <div class="col-md-4">
             <div class="team-block">
               <div class="tb-thumb">
-                <img src="assets/img/team-1.jpg" alt="" class="img-fluid">
+                <img src="{% static 'assets/img/team-1.jpg' %}" alt="" class="img-fluid">
               </div>
               <div class="tb-content">
                 <h3 class="tb-name"><a href="single-volunteer.html">Janne <span class="tb-role">Volunteer</span></a>
@@ -189,7 +195,7 @@
           <div class="col-md-4 mt-50">
             <div class="team-block">
               <div class="tb-thumb">
-                <img src="assets/img/team-2.jpg" alt="" class="img-fluid">
+                <img src="{% static 'assets/img/team-2.jpg' %}" alt="" class="img-fluid">
               </div>
               <div class="tb-content">
                 <h3 class="tb-name"><a href="single-volunteer.html">Kevin <span class="tb-role">Volunteer</span></a>
@@ -209,7 +215,7 @@
           <div class="col-md-4">
             <div class="team-block">
               <div class="tb-thumb">
-                <img src="assets/img/team-3.jpg" alt="" class="img-fluid">
+                <img src="{% static 'assets/img/team-3.jpg' %}" alt="" class="img-fluid">
               </div>
               <div class="tb-content">
                 <h3 class="tb-name"><a href="single-volunteer.html">Sarah <span class="tb-role">Volunteer</span></a>
